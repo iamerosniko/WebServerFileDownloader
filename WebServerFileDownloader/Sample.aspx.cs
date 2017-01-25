@@ -14,6 +14,7 @@ namespace WebServerFileDownloader
         {
             if (!IsPostBack)
             {
+                //Populates the files that is under server files folder
                 string[] filePaths = Directory.GetFiles(Server.MapPath("~/Server Files/"));
                 List<ListItem> files = new List<ListItem>();
                 foreach (string filePath in filePaths)
