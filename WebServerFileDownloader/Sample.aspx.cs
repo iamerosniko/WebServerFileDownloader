@@ -10,6 +10,10 @@ namespace WebServerFileDownloader
 {
     public partial class Sample : System.Web.UI.Page
     {
+        /*
+         * this program is a demo for an uploading a file to a server's folder,
+         * and downloading of files under specified server's folder.
+         */
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)
@@ -28,12 +32,19 @@ namespace WebServerFileDownloader
         }
         protected void UploadFile(object sender, EventArgs e)
         {
+            /*
+             * upload a file to Server Files folder.
+             * for mock up only
+            */
             string fileName = Path.GetFileName(FileUpload1.PostedFile.FileName);
             FileUpload1.PostedFile.SaveAs(Server.MapPath("~/Server Files/") + fileName);
             Response.Redirect(Request.Url.AbsoluteUri);
         }
         protected void DownloadFile(object sender, EventArgs e)
         {
+            /*
+             * 
+             */
             string filePath = (sender as LinkButton).CommandArgument;
             Response.ContentType = ContentType;
             Response.AppendHeader("Content-Disposition", "attachment; filename=" + Path.GetFileName(filePath));
