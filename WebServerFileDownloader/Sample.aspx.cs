@@ -14,7 +14,7 @@ namespace WebServerFileDownloader
         {
             if (!IsPostBack)
             {
-                string[] filePaths = Directory.GetFiles(Server.MapPath("~/Server Folder/"));
+                string[] filePaths = Directory.GetFiles(Server.MapPath("~/Server Files/"));
                 List<ListItem> files = new List<ListItem>();
                 foreach (string filePath in filePaths)
                 {
@@ -27,7 +27,7 @@ namespace WebServerFileDownloader
         protected void UploadFile(object sender, EventArgs e)
         {
             string fileName = Path.GetFileName(FileUpload1.PostedFile.FileName);
-            FileUpload1.PostedFile.SaveAs(Server.MapPath("~/Server Folder/") + fileName);
+            FileUpload1.PostedFile.SaveAs(Server.MapPath("~/Server Files/") + fileName);
             Response.Redirect(Request.Url.AbsoluteUri);
         }
         protected void DownloadFile(object sender, EventArgs e)
