@@ -21,6 +21,7 @@ namespace WebServerFileDownloader
                 {
                     files.Add(new ListItem(Path.GetFileName(filePath), filePath));
                 }
+                //view to Gridview
                 GridView1.DataSource = files;
                 GridView1.DataBind();
             }
