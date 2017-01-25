@@ -43,7 +43,7 @@ namespace WebServerFileDownloader
         protected void DownloadFile(object sender, EventArgs e)
         {
             /*
-             * 
+             * When a download link is clicked it downloads the file from server to its client
              */
             string filePath = (sender as LinkButton).CommandArgument;
             Response.ContentType = ContentType;
@@ -53,6 +53,9 @@ namespace WebServerFileDownloader
         }
         protected void DeleteFile(object sender, EventArgs e)
         {
+            /*
+             * Deletes a file from server
+             */
             string filePath = (sender as LinkButton).CommandArgument;
             File.Delete(filePath);
             Response.Redirect(Request.Url.AbsoluteUri);
