@@ -1,0 +1,6 @@
+P:\WebServerFileDownloader\WebServerFileDownloader\bin\WebServerFileDownloader.dll.config
+P:\WebServerFileDownloader\WebServerFileDownloader\bin\WebServerFileDownloader.dll
+P:\WebServerFileDownloader\WebServerFileDownloader\bin\WebServerFileDownloader.pdb
+P:\WebServerFileDownloader\WebServerFileDownloader\obj\Debug\WebServerFileDownloader.csprojResolveAssemblyReference.cache
+P:\WebServerFileDownloader\WebServerFileDownloader\obj\Debug\WebServerFileDownloader.dll
+P:\WebServerFileDownloader\WebServerFileDownloader\obj\Debug\WebServerFileDownloader.pdb
