@@ -35,6 +35,9 @@ namespace WebServerFileDownloader
             /*
              * upload a file to Server Files folder.
              * for mock up only
+             * 
+             * "~/Server Files/"
+             * > where "Server Files" is the server's folder
             */
             string fileName = Path.GetFileName(FileUpload1.PostedFile.FileName);
             FileUpload1.PostedFile.SaveAs(Server.MapPath("~/Server Files/") + fileName);
@@ -44,6 +47,7 @@ namespace WebServerFileDownloader
         {
             /*
              * When a download link is clicked it downloads the file from server to its client
+             * 
              */
             string filePath = (sender as LinkButton).CommandArgument;
             Response.ContentType = ContentType;
